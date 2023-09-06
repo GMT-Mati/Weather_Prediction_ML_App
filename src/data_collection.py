@@ -24,10 +24,10 @@ response = requests.get(API_URL, params=params)
 
 # Check if the request was successful
 if response.status_code == 200:
-    # Save the raw data as a JSON file
-    output_dir = "data/raw_data"
+    # Save the response data as an HTML file
+    output_dir = "data/html_output"
     os.makedirs(output_dir, exist_ok=True)
-    output_filename = os.path.join(output_dir, f"weather_data_{start_date}_{end_date}.json")
+    output_filename = os.path.join(output_dir, f"weather_data_{start_date}_{end_date}.html")
 
     with open(output_filename, "w") as file:
         file.write(response.text)
