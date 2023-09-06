@@ -24,12 +24,11 @@ response = requests.get(API_URL, params=params)
 
 # Check if the request was successful
 if response.status_code == 200:
-    # Create the path for storing the raw data file
+    # Save the raw data as a JSON file
     output_dir = "data/raw_data"
     os.makedirs(output_dir, exist_ok=True)
     output_filename = os.path.join(output_dir, f"weather_data_{start_date}_{end_date}.json")
 
-    # Save the raw data to a JSON file
     with open(output_filename, "w") as file:
         file.write(response.text)
 
