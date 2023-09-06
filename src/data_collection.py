@@ -2,13 +2,13 @@ import requests
 import os
 
 # Define the API endpoint for historical weather data
-API_URL = "https://api.windy.com/api/point-forecast/v2"
+API_URL = "https://www.windy.com/?51.109,15.381,8"
 API_KEY = "uj83H5rjedSM7c6pZZYLCsYvEduKpbeh"  # Replace with your actual API key
 
 # Specify the location coordinates (latitude and longitude) and the desired date range
 location = {"lat": 51.109, "lon": 15.381}
-start_date = "2023-01-01"
-end_date = "2023-01-07"
+start_date = "2023-09-06"
+end_date = "2023-09-06"
 
 # Define the parameters for the API request
 params = {
